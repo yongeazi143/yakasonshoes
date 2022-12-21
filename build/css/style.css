@@ -1057,7 +1057,7 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/build/images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
