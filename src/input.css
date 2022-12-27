@@ -21,6 +21,9 @@ body {
   width: 100%;
   display: block;
 }
+.sidebar.open ul li{
+  transition: all 0.3s ease 0.5s;
+}
 .sidebar.close {
   width: 0;
 }
@@ -51,7 +54,7 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
