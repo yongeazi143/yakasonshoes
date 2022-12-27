@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
 body {
   overflow-x: hidden;
 }
@@ -9,19 +13,52 @@ body {
    display: block;
    border-radius: 5px;
  }
-.sidebar  {
-  @apply translate-x-0;
+
+.sidebar.open {
+  width: 50%;
+}
+.sidebar.open ul {
+  width: 100%;
+  display: block;
+}
+.sidebar.close {
+  width: 0;
+}
+.sidebar.close ul {
+  display: none;
+}
+
+.nav-close {
+  height: 0px;
+  background-color: rgb(104, 103, 103);
+  transition: all 0.5s ease;
+}
+.nav-close > li {
+  display: none;
+  font-size: 18px;
+}
+.nav-open {
+  @apply p-2;
+  background-color: rgb(104, 103, 103);
+  height: max-content;
+   transition: all 0.5s ease;
+}
+
+.nav-open > li {
+  @apply p-1;
+   display: flex;
+   font-size: 18px;
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  height: 89vh;
-  margin: 3px auto 0;
+  height: 50vh;
   position: relative;
 }
+
 
 .word-spacing {
   letter-spacing: 0.2em;
