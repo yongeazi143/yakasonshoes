@@ -22,7 +22,7 @@
   transition: all 1s ease;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .container-slide {
     gap: 10%;
   }
