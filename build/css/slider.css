@@ -21,6 +21,13 @@
   overflow-x: scroll;
   transition: all 1s ease;
 }
+
+@media screen and (max-width: 400px) {
+  .container-slide {
+    gap: 5%;
+  }
+}
+
 /* Handle */
 .container-slide::-webkit-scrollbar {
   display: none;
