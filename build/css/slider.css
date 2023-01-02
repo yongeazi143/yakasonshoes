@@ -15,7 +15,7 @@
 .container-slide {
   display: flex;
   position: relative;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   gap: 2%;
   overflow-x: scroll;
