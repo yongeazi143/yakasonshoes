@@ -22,11 +22,12 @@
   transition: all 1s ease;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .container-slide {
     gap: 10%;
   }
 }
+ */
 
 /* Handle */
 .container-slide::-webkit-scrollbar {
@@ -55,6 +56,7 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
+  margin-right: 1%;
   
 }
 
