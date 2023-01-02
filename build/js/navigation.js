@@ -35,25 +35,9 @@ const dropdownToggle = () => {
   const productContent = document.querySelector("#products-content");
   dropServices.addEventListener("click", function () {
     // services
-    if (active) {
-      console.log(true);
       dropServices.classList.toggle("bg-amber-700");
       servicesContent.classList.toggle("nav-close");
       servicesContent.classList.toggle("nav-open");
-      // dropProduct.addEventListener("click", function () {
-      //    // console.log(false)
-      // dropServices.classList.toggle("bg-amber-700");
-      //   servicesContent.classList.toggle("nav-close");
-      //   servicesContent.classList.toggle("nav-open");
-      // });
-      active = false;
-    } else {
-      dropServices.classList.toggle("bg-amber-700");
-      console.log(false);
-      servicesContent.classList.toggle("nav-close");
-      servicesContent.classList.toggle("nav-open");
-      active = true;
-    }
   });
   dropProduct.addEventListener("click", function () {
     //  product

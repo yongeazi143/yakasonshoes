@@ -559,12 +559,16 @@ video {
   top: 0px;
 }
 
-.right-60 {
-  right: 15rem;
+.right-40 {
+  right: 10rem;
 }
 
-.top-24 {
-  top: 6rem;
+.top-\[65px\] {
+  top: 65px;
+}
+
+.right-24 {
+  right: 6rem;
 }
 
 .top-16 {
@@ -603,12 +607,12 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
-.mt-\[10\%\] {
-  margin-top: 10%;
+.mt-\[5\%\] {
+  margin-top: 5%;
 }
 
 .ml-0 {
@@ -643,6 +647,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .inline {
   display: inline;
 }
@@ -667,10 +675,6 @@ video {
   height: 2rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -693,10 +697,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-10 {
@@ -882,11 +882,6 @@ video {
   text-align: center;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -902,16 +897,16 @@ video {
   line-height: 1.75rem;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-normal {
   font-weight: 400;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .uppercase {
@@ -1025,6 +1020,10 @@ body {
   display: block;
 }
 
+.sidebar.open ul li{
+  transition: all 0.3s ease 0.1s;
+}
+
 .sidebar.close {
   width: 0;
 }
@@ -1059,11 +1058,20 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   height: 50vh;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    height: 95vh;
+  }
+}
+
+#hero {
   position: relative;
 }
 
@@ -1075,8 +1083,9 @@ body {
   line-height: 1.75 !important;
 }
 
-.hover\:cursor-pointer:hover {
-  cursor: pointer;
+.active {
+  --tw-text-opacity: 1;
+  color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 
 .hover\:bg-amber-700:hover {
@@ -1089,9 +1098,9 @@ body {
   background-color: rgb(217 119 6 / var(--tw-bg-opacity));
 }
 
-.hover\:text-\[\#694A26\]:hover {
+.hover\:text-amber-700:hover {
   --tw-text-opacity: 1;
-  color: rgb(105 74 38 / var(--tw-text-opacity));
+  color: rgb(180 83 9 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-2xl:hover {
@@ -1163,6 +1172,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1171,6 +1184,11 @@ body {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-3xl {
