@@ -8,6 +8,11 @@
  }
 body {
   overflow-x: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/about2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
 }
 .dropdown:hover .dropdown-content {
    display: block;
@@ -22,7 +27,7 @@ body {
   display: block;
 }
 .sidebar.open ul li{
-  transition: all 0.3s ease 0.5s;
+  transition: all 0.3s ease 0.1s;
 }
 .sidebar.close {
   width: 0;
@@ -54,11 +59,12 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/images/hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/hero.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   height: 50vh;
+  @apply lg:h-[95vh];
   position: relative;
 }
 
@@ -69,4 +75,8 @@ body {
 
 .article h2, .article p{
   line-height: 1.75 !important;
+}
+
+.active {
+  @apply text-amber-800;
 }
