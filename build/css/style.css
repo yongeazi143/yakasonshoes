@@ -1264,7 +1264,7 @@ video {
 
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/build/images/about2.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/images/about2.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
