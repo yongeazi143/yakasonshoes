@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+ html {
+  scroll-snap-type: x mandatory;
+  font-family: 'Poppins', sans-serif;
+ }
+
 .container_group {
   margin: auto;
   padding: 50px;
@@ -37,18 +43,21 @@
 
 ::-webkit-scrollbar {
   width: 15px;
-  cursor: pointer;
 }
+
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
    background-color: #333;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #464545;
+} 
 
 .container-slide .card {
   position: relative;

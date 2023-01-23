@@ -18,29 +18,29 @@
 
 <body>
   <!-- header Section For Website Logo and Navigations -->
-  <header class="bg-opacity-80 z-10 text-domino fixed top-0 w-full bg-white px-3 uppercase shadow-md h-16">
+  <header class="z-10 fixed top-0 w-full bg-white px-3 uppercase shadow-md h-16">
     <div class="container mx-auto flex items-center justify-between h-full">
       <!-- Website Logo -->
       <a href="index.html" class="flex items-center justify-center">
         <img class="h-8 lg:h-12" src="./images/logo.png" alt="logo" />
       </a>
       <!-- Full Navigation For All Screen Size Expect Mobile -->
-      <nav class="hidden font-medium md:block lg:text-lg">
-        <ul class="mx-auto flex items-center">
-          <li class="active p-5 xl:p-8 hover:text-amber-900">
-            <a href="#hero" class=""> Home </a>
+      <nav class="hidden font-medium md:block lg:text-lg h-full navbar">
+        <ul class="mx-auto flex items-center h-full">
+          <li class=" p-5 xl:p-8 hover:text-amber-900 link">
+            <a href="#hero" class="active"> Home </a>
           </li>
-          <li class="p-5 xl:p-8 hover:text-amber-900">
+          <li class="p-5 xl:p-8 hover:text-amber-900 link">
             <a href="#about" class=""> about us </a>
           </li>
           <!-- Services Dropdown Link -->
           <li class="dropdown p-5 xl:p-8">
-            <div class=" w-full flex justify-center items-center hover:text-amber-900 cursor-pointer">
+            <div class=" w-full flex justify-center items-center hover:text-amber-900 cursor-pointer link">
               <a href="#services" class=""> services </a>
               <i class='bx bx-chevron-down bx-md'></i>
             </div>
             <!-- Container For Services Dropdown Contents -->
-            <div class="dropdown-content absolute right-40 top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
+            <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
               <ul>
                 <li class="pb-3 hover:text-amber-900">
                   <a href="#services" class="">Footwear Consultancy
@@ -75,12 +75,12 @@
           </li>
           <!-- Products Dropdown Link -->
           <li class="dropdown p-5 xl:p-8" id="dropdown">
-            <div class="w-full flex justify-center items-center  hover:text-amber-900 cursor-pointer">
+            <div class="w-full flex justify-center items-center  hover:text-amber-900 cursor-pointer link">
               <a href="#products" class=""> products </a>
               <i class=' mt-1 bx bx-chevron-down bx-md'></i>
             </div>
             <!-- Container For Products Dropdown Contents -->
-            <div class="dropdown-content absolute right-24 top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
+            <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
               <ul>
                 <li class="pb-3 hover:text-amber-900">
                   <a href="#products" class=">Leather Bags </a>
@@ -110,20 +110,30 @@
               </ul>
             </div>
           </li>
-          <li class="p-5 xl:p-8 hover:text-amber-900">
+          <li class="p-5 xl:p-8 hover:text-amber-900 link">
             <a href="#contact" class=""> contact us </a>
           </li>
         </ul>
       </nav>
-      <!-- Menu Button Toggler For Small Screen Sizes -->
-      <span class="md:hidden w-10 h-10 cursor-pointer" id="nav-toggle">
-        <i class='bx bx-menu-alt-left bx-lg'></i>
-      </span>
+      <div class="flex items-center cursor-pointer">
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
+          <span class=" relative">
+            <i class='bx bx-cart bx-lg'></i>
+          </span>
+          <div class="cart-items absolute text-white bg-amber-900 py-1 px-3 rounded-xl top-[30px]" id="quantity">
+            0
+          </div>
+        </div>
+        <!-- Menu Button Toggler For Small Screen Sizes -->
+        <span class="md:hidden w-10 h-10 cursor-pointer" id="nav-toggle">
+          <i class='bx bx-menu-alt-left bx-lg'></i>
+        </span>
+      </div>
     </div>
     <!-- Navigation for mobile screen devices -->
-    <div class="absolute top-16 left-0 z-10 min-h-screen bg-[#333]  transition-all md:hidden sidebar close"
+    <div class="absolute bg-opacity-90 top-16 left-0 z-10 min-h-screen bg-[#333]  transition-all md:hidden sidebar close"
       id="mobile-nav">
-      <ul class="p-3 mt-[5%] flex flex-col text-gray-50">
+      <ul class="p-3 mt-[10%] flex flex-col justify-around h-[40vh] text-gray-50">
         <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
           <i class='bx bx-home'></i>
           <a href="#hero">Home</a>
@@ -132,102 +142,21 @@
           <i class='bx bx-compass'></i>
           <a href="#about">About us</a>
         </li>
-        <li class="">
-          <div class="p-2 w-full  flex items-center gap-1  hover:bg-amber-900  active:text-gray-50 cursor-pointer"
-            id="drop-services">
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
             <i class='bx bx-cog bx-spin'></i>
-            <a href="#services" class="flex justify-between items-center w-full">Services
-              <i class='bx bx-caret-down-circle items-center'></i>
-            </a>
-          </div>
-          <!-- Services Dropdown -->
-          <ul class="flex flex-col normal-case nav-close submenu" id="services-content">
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">Footwear consultancy
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">Supply of footwear materials
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">
-                Supply of machinery
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">
-                Cooperate footwear tranning
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">
-                Production of footwear products
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#services">
-                Distribution of footwear products
-              </a>
-            </li>
-          </ul>
+          <a href="#services">Services</a>
         </li>
-        <li class="">
-          <div class="p-2 w-full  flex items-center gap-1  hover:bg-amber-900  active:text-gray-50 cursor-pointer"
-            id="drop-products">
-            <i class='bx bx-cog'></i>
-            <a href="#product" class="flex justify-between items-center w-full">Product
-              <i class='bx bx-caret-down-circle items-center'></i>
-            </a>
-          </div>
-          <!-- Product Dropdown -->
-          <ul class="flex flex-col normal-case nav-close submenu" id="products-content">
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">Leather bags
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">Leather belts
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">
-                Cortina school shoe
-              </a>
-            </li>
-            <li class=" active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">
-                Childern shoes
-              </a>
-            </li>
-            <li class="active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">
-                Casual shoes
-              </a>
-            </li>
-            <li class="active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-              <a href="#product">
-                Men coperate
-              </a>
-            </li>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+            <i class='bx bx-cog bx-spin'></i>
+          <a href="#products">Products</a>
         </li>
-        <li class="active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-          <a href="#product">
-            Safety boots
-          </a>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+          <i class='bx bxs-contact bx-tada'></i>
+          <a href="#contact">Contact us</a>
         </li>
-        </li>
-        <li class="active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer mb-[1px]">
-          <a href="#product">
-            Military boots
-          </a>
-        </li>
+      <a href="#" class="p-2 bg-amber-900 text-gray-50
+       hover:bg-amber-800 font-medium cursor-pointer text-center rounded-full">Request School Shoes</a>
       </ul>
-      </li>
-      <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
-        <i class='bx bxs-contact bx-tada'></i>
-        <a href="#contact">Contact us</a>
-      </li>
     </div>
   </header>
   <!-- 🔥🔥🔥🔥🔥🔥🔥🔥
@@ -246,12 +175,13 @@
         </p>
       </article>
       <a class=" py-4 px-7 text-white font-medium bg-amber-900 rounded-md hover:text-amber-900 hover:bg-transparent hover:border-2 hover:border-solid hover:border-amber-900"
-        href="#">Learn More</a>
+        href="products.html">shop now</a>
     </section>
     <!-- Hero Section Ends -->
     <!-- About us section -->
     <section
-      class="bg-amber-900 w-full p-5 text-white text-lg flex flex-col-reverse justify-around lg:flex-row items-center">
+      class="bg-amber-900 w-full p-5 text-white text-lg flex flex-col-reverse justify-around lg:flex-row items-center"
+      id="about">
       <img src="images/about1.png" alt="about-us-img">
       <article class="flex gap-3 flex-col text-center text-slate-100">
         <h1 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">About us</h1>
@@ -265,44 +195,47 @@
       </article>
     </section>
     <section class="w-full bg-transparent min-h-screen">
-      
+
       <h1 class="text-center pt-20 pb-20 text-3xl lg:text-5xl font-bold text-white">We Got You Covered</h1>
       <div class="flex justify-around gap-5 flex-col lg:flex-row items-center pb-6">
-      <article class=" flex p-5 flex-col text-center text-slate-100
+        <article class=" flex p-5 flex-col text-center text-slate-100
       border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
-        <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our History</h3>
-        <p class="lg:text-2xl w-full self-center text-lg">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our History</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
 
-          Yakason Global Best Venture is registered with the Corporate Affairs Commission in 2005 with the intent to
-          produce; distribute and export footwear. Target end users include all age categories across the country.
+            Yakason Global Best Venture is registered with the Corporate Affairs Commission in 2005 with the intent to
+            produce; distribute and export footwear. Target end users include all age categories across the country.
 
-        </p>
-      </article>
-      <article class=" flex p-5 flex-col text-center text-slate-100
+          </p>
+        </article>
+        <article class=" flex p-5 flex-col text-center text-slate-100
       border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
-        <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our Mission & Vision</h3>
-        <p class="lg:text-2xl w-full self-center text-lg">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our Mission & Vision</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
 
-          Our mission is to make the company a household name across the country and beyond.
-          We envision providing footwear that competes favorably with foreign products to the local market at a price that represents value for money
-          
-        </p>
-      </article>
-      <article class=" flex p-5 flex-col text-center text-slate-100
+            Our mission is to make the company a household name across the country and beyond.
+            We envision providing footwear that competes favorably with foreign products to the local market at a price
+            that represents value for money
+
+          </p>
+        </article>
+        <article class=" flex p-5 flex-col text-center text-slate-100
       border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
-        <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Quality Policy</h3>
-        <p class="lg:text-2xl w-full self-center text-lg">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Quality Policy</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
 
-          We operate a quality culture in our operations with an emphasis on durability and appealing design. After-sales feedback is available to take complaints and replacement of the impaired product under set conditions.
+            We operate a quality culture in our operations with an emphasis on durability and appealing design.
+            After-sales feedback is available to take complaints and replacement of the impaired product under set
+            conditions.
 
 
-        </p>
-      </article>
+          </p>
+        </article>
       </div>
     </section>
     <!-- About us section ends -->
     <!-- Services Section -->
-    <section class="w-full h-auto bg-white">
+    <section class="w-full h-auto bg-white" id="services">
       <h1 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">Why choose us?</h1>
       <div class="flex flex-col justify-center items-center gap-3 lg:flex-row">
         <!-- 1 -->
@@ -353,30 +286,38 @@
     <!-- Newsletters -->
     <section class="bg-amber-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div class="mx-auto max-w-screen-md sm:text-center">
-              <h2 class="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">Sign up for our newsletter</h2>
-              <p class="mx-auto mb-8 max-w-2xl font-light text-white md:mb-12 sm:text-xl">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
-              <form action="#">
-                  <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-                      <div class="relative w-full">
-                          <label for="email" class="hidden mb-2 text-sm font-medium text-white">Email address</label>
-                          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <i class='bx bxs-envelope bx-md text-white'></i>
-                          </div>
-                          <input class="block p-3 pl-12 w-full text-sm text-white bg-transparent rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg placeholder-white" placeholder="Enter your email" type="email" id="email" required="" autocomplete="off"/>
-                      </div>
-                      <div>
-                          <button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-amber-800">Subscribe</button>
-                      </div>
-                  </div>
-                  <div class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <a href="#" class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.</div>
-              </form>
-          </div>
+        <div class="mx-auto max-w-screen-md sm:text-center">
+          <h2 class="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">Sign up for our newsletter</h2>
+          <p class="mx-auto mb-8 max-w-2xl font-light text-white md:mb-12 sm:text-xl">Stay up to date with the roadmap
+            progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+          <form action="#">
+            <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+              <div class="relative w-full">
+                <label for="email" class="hidden mb-2 text-sm font-medium text-white">Email address</label>
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                  <i class='bx bxs-envelope bx-md text-white'></i>
+                </div>
+                <input
+                  class="block p-3 pl-12 w-full text-sm text-white bg-transparent rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg placeholder-white"
+                  placeholder="Enter your email" type="email" id="email" required="" autocomplete="off" />
+              </div>
+              <div>
+                <button type="submit"
+                  class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-amber-800">Subscribe</button>
+              </div>
+            </div>
+            <div
+              class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
+              We care about the protection of your data. <a href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <!-- Nwesletters Ends -->
     <!-- Product Category -->
-    <section class="w-full pb-4 bg-white" id="products">
+    <section class="w-full pb-4 bg-slate-100 -scroll-mt-10" id="products">
       <h2 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">Our Product</h2>
       <div class="container_group">
         <i class='hidden md:block bx bx-left-arrow-circle bx-lg arrow' id="slide-left"></i>
@@ -573,25 +514,34 @@
     </section>
     <!-- End Of Products -->
     <!-- Contact -->
-    <section class="bg-amber-900">
+    <section class="bg-amber-900" id="contact">
       <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
-          <p class="mb-8 lg:mb-16 font-light text-center text-slate-100 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Footwear maunfacturing? Let us know.</p>
-          <form action="#" class="space-y-8">
-              <div>
-                  <label for="email" class="block mb-2 text-sm font-medium text-slate-100">Your email</label>
-                  <input type="email" id="email" class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="Enter your email" required>
-              </div>
-              <div>
-                  <label for="text" class="block mb-2 text-sm font-medium text-slate-100">Your subject</label>
-                  <input type="text" id="subject" class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="How can we be of assistance?" required>
-              </div>
-              <div class="sm:col-span-2">
-                  <label for="message" class="block mb-2 text-sm font-medium text-slate-100">Your message</label>
-                  <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Explain in details..."></textarea>
-              </div>
-              <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-transparent border sm:w-fit  focus:ring-4 focus:outline-none hover:bg-amber-800">Send message</button>
-          </form>
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-slate-100 sm:text-xl">Got a technical issue? Want to send
+          feedback about a beta feature? Need details about our Footwear maunfacturing? Let us know.</p>
+        <form action="#" class="space-y-8">
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-slate-100">Your email</label>
+            <input type="email" id="email"
+              class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="Enter your email" required>
+          </div>
+          <div>
+            <label for="text" class="block mb-2 text-sm font-medium text-slate-100">Your subject</label>
+            <input type="text" id="subject"
+              class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="How can we be of assistance?" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block mb-2 text-sm font-medium text-slate-100">Your message</label>
+            <textarea id="message" rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Explain in details..."></textarea>
+          </div>
+          <button type="submit"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-transparent border sm:w-fit  focus:ring-4 focus:outline-none hover:bg-amber-800">Send
+            message</button>
+        </form>
       </div>
     </section>
     <!-- End Of Contact -->
@@ -600,15 +550,19 @@
     <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div class="sm:col-span-2">
-          <a href="/" aria-label="Go home"  class="inline-flex items-center">
-            <span class=" text-xl font-bold tracking-wide text-slate-100 uppercase">Yakason Global Best Venture</span>
+          <a href="/" aria-label="Go home" class="inline-flex items-center">
+            <span class=" text-xl font-bold tracking-wide text-amber-900 ring-4 p-1 ring-white uppercase">Yakason Global
+              Best Venture</span>
           </a>
           <div class="mt-6 lg:max-w-sm">
             <p class="text-sm text-slate-100">
-              Our customers are the reason we are in business. The need and taste of our end users are incorporated in our chain of production to delivery of products.   
+              Our customers are the reason we are in business. The need and taste of our end users are incorporated in
+              our chain of production to delivery of products.
             </p>
             <p class="mt-4 text-sm text-slate-100">
-              We have showrooms for display and booking of orders for any of our products.  Specifications and price are clearly agreed as well as delivery timelines.  Our customer care line is open 24 hours to attend to your needs and take orders. 
+              We have showrooms for display and booking of orders for any of our products. Specifications and price are
+              clearly agreed as well as delivery timelines. Our customer care line is open 24 hours to attend to your
+              needs and take orders.
             </p>
           </div>
         </div>
@@ -616,15 +570,18 @@
           <p class="text-base font-bold tracking-wide text-slate">Contacts Info</p>
           <div class="flex">
             <p class="mr-1 text-slate-100">Phone:</p>
-            <a href="tel:+234-808-0880-439" aria-label="Our phone" title="Our phone" class="text-slate-100">+234 808 0880 439</a>
+            <a href="tel:+234-808-0880-439" aria-label="Our phone" title="Our phone" class="text-slate-100">+234 808
+              0880 439</a>
           </div>
           <div class="flex">
             <p class="mr-1 text-slate-100">Email:</p>
-            <a href="mailto:yakason2007@yahoo.com" aria-label="Our email" title="Our email" class="text-slate-100">info@yakasonshoes.com</a>
+            <a href="mailto:yakason2007@yahoo.com" aria-label="Our email" title="Our email"
+              class="text-slate-100">info@yakasonshoes.com</a>
           </div>
           <div class="flex">
             <p class="mr-1 text-slate-100">Address:</p>
-            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="text-slate-100">
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address"
+              title="Our address" class="text-slate-100">
               99 Abeokuta Expressway Lagos.
             </a>
           </div>
@@ -666,6 +623,7 @@
   </footer>
   <script src="./js/navigation.js"></script>
   <script src="./js/slider.js"></script>
+  <script type="module" src="js/cartDOM.js"></script>
 </body>
 
 </html>
