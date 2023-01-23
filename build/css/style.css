@@ -1282,7 +1282,7 @@ video {
 body {
   overflow-x: hidden;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/build/images/about2.png");
+    url("/images/about2.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1342,7 +1342,7 @@ body {
 
 #hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/build/images/hero.jpg");
+    url("/images/hero.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -1360,7 +1360,7 @@ body {
 }
 
 #product_hero {
-  background-image: url("/build/images/banner.jpg");
+  background-image: url("/images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
