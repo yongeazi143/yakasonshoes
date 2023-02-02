@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
- html {
-  scroll-snap-type: x mandatory;
-  font-family: 'Poppins', sans-serif;
- }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+}
 
 .container_group {
   margin: auto;
@@ -30,35 +29,6 @@
   transition: all 1s ease;
 }
 
-/* @media screen and (max-width: 300px) {
-  .container-slide .card{
-    gap: 10%;
-  }
-} */
-
-/* Handle */
-.container-slide::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-   background-color: #333;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #464545;
-} 
-
 .container-slide .card {
   position: relative;
   min-width: 320px;
@@ -77,7 +47,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #8C6A44;
+  background: #8c6a44;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
@@ -95,7 +65,6 @@
   font-weight: 800;
   font-style: italic;
   color: rgba(255, 255, 255, 0.04);
-
 }
 
 .container-slide .card .imgBx {
@@ -105,7 +74,7 @@
   z-index: 1000;
   width: 100%;
   height: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .container-slide .card:hover .imgBx {
@@ -149,7 +118,7 @@
   justify-content: center;
   align-items: center;
   padding: 8px 20px;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0;
   visibility: hidden;
 }
@@ -157,7 +126,7 @@
 .container-slide .card:hover .contentBx .price {
   opacity: 1;
   visibility: visible;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
 .container-slide .card .contentBx .price h3 {
@@ -181,12 +150,11 @@
   color: #111;
   background: #fff;
   margin: 0 5px;
-  transition: .5s;
+  transition: 0.5s;
   color: #111;
   border-radius: 4px;
   cursor: pointer;
 }
-
 
 .container-slide .card .contentBx a {
   display: inline-block;
@@ -200,7 +168,7 @@
   color: #fff;
   opacity: 0;
   transform: translateY(50px);
-  transition: .5s;
+  transition: 0.5s;
 }
 .container-slide .card:hover .contentBx a:hover {
   transition-delay: 0s;
@@ -210,7 +178,7 @@
 .container-slide .card:hover .contentBx a {
   opacity: 1;
   transform: translateY(0px);
-  transition-delay: .7s;
+  transition-delay: 0.7s;
 }
 /* .action .order:hover {
   border: 1px solid #b45309;

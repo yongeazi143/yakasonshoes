@@ -18,7 +18,7 @@ navToggle();
 // Smooth Scroll Animation
 const scrollToSection = () => {
   const navbarlinks = document.querySelectorAll(".navbar a");
-
+  // console.log(navbarlinks);
   //Chaning the colours of link when clicked!!.
   navbarlinks.forEach((_link) => {
     _link.addEventListener("click", function (event) {
@@ -29,6 +29,7 @@ const scrollToSection = () => {
       }
 
       _link.classList.toggle("active");
+      // console.log(event);
       smoothScroll(event);
     });
   });
