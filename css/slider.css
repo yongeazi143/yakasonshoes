@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.container_group {
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+
+  /* justify-items: center; */
+}
+
+.arrow {
+  margin: 3%;
+  cursor: pointer;
+  /* color: #fff; */
+}
+.container-slide {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  gap: 2%;
+  z-index: 1;
+  overflow-x: scroll;
+  transition: all 1s ease;
+}
+
+.container-slide .card {
+  position: relative;
+  min-width: 320px;
+  height: 450px;
+  background: #5e2c04;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.container-slide .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #8c6a44;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container-slide .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container-slide .card:after {
+  content: "shoes";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 10em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+.container-slide .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container-slide .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(-25%);
+  /* bug  */
+}
+
+.container-slide .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  width: 270px;
+}
+
+.container-slide .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 90;
+}
+
+.container-slide .card:hover .contentBx {
+  height: 210px;
+}
+
+.container-slide .card .contentBx h2 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.container-slide .card .contentBx .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container-slide .card:hover .contentBx .price {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container-slide .card .contentBx .price h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container-slide .card .contentBx .price span {
+  width: auto;
+  padding: 10px;
+  font-weight: 600;
+  height: auto;
+  text-align: center;
+  line-height: 26px;
+  font-size: 20px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-slide .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  background: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container-slide .card:hover .contentBx a:hover {
+  transition-delay: 0s;
+  background-color: #a14906;
+}
+
+.container-slide .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.7s;
+}
+/* .action .order:hover {
+  border: 1px solid #b45309;
+  background: none;
+  color: #b45309;
+} */
