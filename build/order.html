@@ -9,9 +9,19 @@
    <link rel="icon" href="images/logo.png" type="image/x-icon" />
    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
    <link rel="stylesheet" href="./css/style.css" />
+   <link rel="stylesheet" href="./css/valorder.css" />
 </head>
 
 <body>
+   <section class=" modal-box top-0 fixed flex justify-center items-center w-full z-10 h-full display-none bg-[rgba(0,0,0,0.5)]">
+      <div class="modal bg-white text-center rounded-sm p-12">
+         <i class="bx bx-check-circle text-7xl mb-5 text-green-700"></i>
+         <h1 class="text-2xl font-medium">Thank you for your submission!</h1>
+         <p class="text-amber-900 font-bold">we will get in touch in 24-48 hours</p>
+         <button
+            class="py-2 px-5 bg-red-800 font-bold rounded-md text-white  mt-5 hover:bg-red-700" close-btn>Close</button>
+      </div>
+   </section>
    <!-- header Section For Website Logo and Navigations -->
    <header class="z-10 fixed top-0 w-full bg-white px-3 uppercase shadow-md h-16">
       <div class="container mx-auto flex items-center justify-between h-full">
@@ -23,98 +33,33 @@
          <nav class="hidden font-medium md:block lg:text-lg h-full navbar">
             <ul class="mx-auto flex items-center h-full">
                <li class="p-5 xl:p-8 hover:text-amber-900 link">
-                  <a href="#hero" class="active"> Home </a>
+                  <a href="index.html#hero" class="active"> Home </a>
                </li>
                <li class="p-5 xl:p-8 hover:text-amber-900 link">
-                  <a href="#about" class=""> about us </a>
+                  <a href="index.html#about" class=""> about us </a>
                </li>
                <!-- Services Dropdown Link -->
-               <li class="dropdown p-5 xl:p-8">
-                  <div class="w-full flex justify-center items-center hover:text-amber-900 cursor-pointer link">
-                     <a href="#services" class=""> services </a>
-                     <i class="bx bx-chevron-down bx-md"></i>
-                  </div>
-                  <!-- Container For Services Dropdown Contents -->
-                  <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
-                     <ul>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class="">Footwear Consultancy </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class="">Supply of footwear materials
-                           </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class=""> Supply of Machinery </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class="">
-                              Cooperate Footwear Tranning
-                           </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class="">
-                              Production OF footwear products
-                           </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#services" class="">
-                              Distribution of footwear products
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
+               <li class="p-5 xl:p-8 hover:text-amber-900 link">
+                  <a href="index.html#services" class=""> services </a>
                </li>
                <!-- Products Dropdown Link -->
-               <li class="dropdown p-5 xl:p-8" id="dropdown">
-                  <div class="w-full flex justify-center items-center hover:text-amber-900 cursor-pointer link">
-                     <a href="#products" class=""> products </a>
-                     <i class="mt-1 bx bx-chevron-down bx-md"></i>
-                  </div>
-                  <!-- Container For Products Dropdown Contents -->
-                  <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
-                     <ul>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Leather Bags </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Leather Belts </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Cortina School Shoes </a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Children Shoes</a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Casual Shoes</a>
-                        </li>
-                        <li class="pb-3">
-                           <a href="#products" class="">Men Coperate</a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">Safety Boots</a>
-                        </li>
-                        <li class="pb-3 hover:text-amber-900">
-                           <a href="#products" class="">military boots </a>
-                        </li>
-                     </ul>
-                  </div>
+               <li class="p-5 xl:p-8 hover:text-amber-900 link" id="dropdown">
+                  <a href="index.html#products" class=""> products </a>
                </li>
                <li class="p-5 xl:p-8 hover:text-amber-900 link">
-                  <a href="#contact" class=""> contact us </a>
+                  <a href="index.html#contact" class=""> contact us </a>
                </li>
             </ul>
          </nav>
          <div class="flex items-center cursor-pointer">
-            <div class="cart-icon" onclick="window.location.href='cart.html'">
+            <!-- <div class="cart-icon" onclick="window.location.href='cart.html'">
                <span class="relative">
                   <i class="bx bx-cart bx-lg"></i>
                </span>
                <div class="cart-items absolute text-white bg-amber-900 py-1 px-3 rounded-xl top-[30px]" id="quantity">
                   0
                </div>
-            </div>
+            </div> -->
             <!-- Menu Button Toggler For Small Screen Sizes -->
             <span class="md:hidden w-10 h-10 cursor-pointer" id="nav-toggle">
                <i class="bx bx-menu-alt-left bx-lg"></i>
@@ -128,23 +73,24 @@
          <ul class="p-3 mt-[10%] flex flex-col justify-around h-[40vh] text-gray-50">
             <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
                <i class="bx bx-home"></i>
-               <a href="#hero">home</a>
+               <a href="index.html#hero">home</a>
             </li>
-            <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer ml-0 mb-[1px]">
+            <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer 
+            ml-0 mb-[1px]">
                <i class="bx bx-compass"></i>
-               <a href="#about">About us</a>
+               <a href="index.html#about">About us</a>
             </li>
             <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
                <i class="bx bx-cog bx-spin"></i>
-               <a href="#services">Services</a>
+               <a href="index.html#services">Services</a>
             </li>
             <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
                <i class="bx bx-cog bx-spin"></i>
-               <a href="#products">Products</a>
+               <a href="index.html#products">Products</a>
             </li>
             <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
                <i class="bx bxs-contact bx-tada"></i>
-               <a href="#contact">Contact us</a>
+               <a href="index.html#contact">Contact us</a>
             </li>
             <a href="#"
                class="p-2 mt-5 bg-amber-900 text-gray-50 hover:bg-amber-800 font-medium cursor-pointer text-center rounded-md">order
@@ -167,36 +113,48 @@
                <label for="buyers_name" class="block mb-2 text-base font-semibold text-black">Buyers Name</label>
                <input type="text" id="buyers_name"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="Name of buyer" required />
+                  placeholder="Name of buyer" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  Buyers name cannot be empty
+                </p>
             </div>
             <div>
                <label for="business_name" class="block mb-2 text-base font-semibold text-black">Company / School Name
                </label>
                <input type="text" id="business_name"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="School" required />
+                  placeholder="School" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  School name cannot be empty
+                </p>
             </div>
             <div>
                <label for="email" class="block mb-2 text-base font-semibold text-black">Email Address
                </label>
                <input type="email" id="email_id"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="Email Address" required />
+                  placeholder="Email Address" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  Email Address cannot be empty
+                </p>
             </div>
             <div>
                <label for="phone" class="block mb-2 text-base font-semibold text-black">Phone no
                </label>
                <input type="tel" id="phone_no"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="Phone No" required />
+                  placeholder="09021872392" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  Phone no cannot be empty
+                </p>
             </div>
             <div>
                <label for="pname" class="block mb-2 text-base font-semibold text-black">Product Name
                </label>
 
-               <select id="countries"
+               <select id="shoe_type"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5">
-                  <option selected>Shoe Type</option>
+                  <option selected value="">Shoe Type</option>
                   <option value="C0R-BA">Cortina (black)</option>
                   <option value="COR-BR">Cortina (brown)</option>
                   <option value="MIL-BT">Military Boots</option>
@@ -208,6 +166,9 @@
                   <option value="OXF">Oxford</option>
                   <option value="MON">Mong</option>
                </select>
+                <p class="hidden" error-message>
+                  Please select a shoe type
+                </p>
             </div>
             <div>
                <label for="text" class="block mb-2 text-base font-semibold text-black">if not found specify your shoes
@@ -215,13 +176,16 @@
                </label>
                <input type="text" id="orders"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="other shoe type" />
+                  placeholder="other shoe type" autocomplete="off"/>
             </div>
             <div>
                <label for="file" class="block mb-2 text-base font-semibold  text-black">Your shoe design (optional)
                </label>
                <input type="file" id="file_id"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base cursor-pointer font-semibold block w-full p-2.5" />
+                <p class="hidden" error-message>
+                  Please select a file
+                </p>
             </div>
 
             <div>
@@ -229,81 +193,92 @@
                </label>
                <input type="number" id="quantity"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
-                  placeholder="" required />
+                  placeholder="" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  Specify total quantity
+                </p>
             </div>
             <div>
                <label for="sizes" class="block mb-2 text-base font-semibold text-black">Tick desirable sizes</label>
-               <div
-                  class="bg-transparent border border-gray-300 text-gray-900
-                   text-base font-semibold  grid grid-cols-6 md:grid-cols-12 gap-3 w-full p-2.5 text-center">
-                  <input type="checkbox" name="s-22" id="" class="">
+               <div class="bg-transparent border border-gray-300 text-gray-900 
+                   text-base font-semibold  grid grid-cols-6 md:grid-cols-12 gap-3 w-full p-2.5 text-center" check-container>
+                  <input type="checkbox" name="sizes[]"  value="s-22" id="" class="">
                   <label for="s-22" class="mb-2 text-base font-semibold ">22</label>
-                  <input type="checkbox" name="s-23" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-23" id="">
                   <label for="s-23" class="mb-2 text-base font-semibold text-black">23</label>
-                  <input type="checkbox" name="s-24" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-24" id="">
                   <label for="s-24" class="mb-2 text-base font-semibold text-black">24</label>
-                  <input type="checkbox" name="s-25" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-25" id="">
                   <label for="s-25" class="mb-2 text-base font-semibold text-black">25</label>
-                  <input type="checkbox" name="s-26" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-26" id="">
                   <label for="s-26" class="mb-2 text-base font-semibold text-black">26</label>
-                  <input type="checkbox" name="s-27" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-27" id="">
                   <label for="s-27" class="mb-2 text-base font-semibold text-black">27</label>
-                  <input type="checkbox" name="s-28" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-28" id="">
                   <label for="s-28" class="mb-2 text-base font-semibold text-black">28</label>
-                  <input type="checkbox" name="s-29" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-29" id="">
                   <label for="s-29" class="mb-2 text-base font-semibold text-black">29</label>
-                  <input type="checkbox" name="s-30" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-30" id="">
                   <label for="s-30" class="mb-2 text-base font-semibold text-black">30</label>
-                  <input type="checkbox" name="s-31" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-31" id="">
                   <label for="s-31" class="mb-2 text-base font-semibold text-black">31</label>
-                  <input type="checkbox" name="s-32" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-32" id="">
                   <label for="s-32" class="mb-2 text-base font-semibold text-black">32</label>
-                  <input type="checkbox" name="s-33" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-33" id="">
                   <label for="s-33" class="mb-2 text-base font-semibold text-black">33</label>
-                  <input type="checkbox" name="s-34" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-34" id="">
                   <label for="s-34" class="mb-2 text-base font-semibold text-black">34</label>
-                  <input type="checkbox" name="s-35" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-35" id="">
                   <label for="s-35" class="mb-2 text-base font-semibold text-black">35</label>
-                  <input type="checkbox" name="s-36" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-36" id="">
                   <label for="s-36" class="mb-2 text-base font-semibold text-black">36</label>
-                  <input type="checkbox" name="s-37" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-37" id="">
                   <label for="s-37" class="mb-2 text-base font-semibold text-black">37</label>
-                  <input type="checkbox" name="s-38" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-38" id="">
                   <label for="s-38" class="mb-2 text-base font-semibold text-black">38</label>
-                  <input type="checkbox" name="s-39" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-39" id="">
                   <label for="s-39" class="mb-2 text-base font-semibold text-black">39</label>
-                  <input type="checkbox" name="s-40" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-40" id="">
                   <label for="s-40" class="mb-2 text-base font-semibold text-black">40</label>
-                  <input type="checkbox" name="s-41" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-41" id="">
                   <label for="s-41" class="mb-2 text-base font-semibold text-black">41</label>
-                  <input type="checkbox" name="s-42" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-42" id="">
                   <label for="s-42" class="mb-2 text-base font-semibold text-black">42</label>
-                  <input type="checkbox" name="s-43" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-43" id="">
                   <label for="s-43" class="mb-2 text-base font-semibold text-black">43</label>
-                  <input type="checkbox" name="s-44" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-44" id="">
                   <label for="s-44" class="mb-2 text-base font-semibold text-black">44</label>
-                  <input type="checkbox" name="s-45" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-45" id="">
                   <label for="s-45" class="mb-2 text-base font-semibold text-black">45</label>
-                  <input type="checkbox" name="s-46" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-46" id="">
                   <label for="s-46" class="mb-2 text-base font-semibold text-black">46</label>
-                  <input type="checkbox" name="s-47" id="">
+                  <input type="checkbox" name="sizes[]"  value="s-47" id="">
                   <label for="s-47" class="mb-2 text-base font-semibold text-black">47</label>
-                  <input type="checkbox" name="s-48" id="">
+                  <input type="checkbox" name="sizes[]" value="s-48" id="">
                   <label for="s-48" class="mb-2 text-base font-semibold text-black">48</label>
                </div>
+                <p class="hidden" error-message>
+                  Pick at least two sizes
+                </p>
             </div>
             <div>
                <label for="s-pairs" class="block mb-2 text-base font-semibold text-black">List of sizes </label>
                <textarea rows="6"
                   class="bg-transparent border border-gray-300 text-gray-900 text-base font-semibold block w-full p-2.5"
                   placeholder="Example: size/quantity, 40/8, 35/7"></textarea>
+                <p class="hidden" error-message>
+                  Sizes quantity cannot be empty
+                </p>
 
                <div class="lg:mt-5">
                   <label for="delivery" class="block mb-2 text-base font-semibold text-black">Delivery Method </label>
 
-                  <input type="text" id=""
+                  <input type="text" id="delivery_method"
                      class="bg-transparent border border-gray-300 text-gray-900 text-base cursor-pointer font-semibold block w-full p-2.5"
-                     placeholder="Logistics" />
+                     placeholder="Logistics" autocomplete="off"/>
+                <p class="hidden" error-message>
+                  Specify delivery method
+                </p>
                </div>
             </div>
 
@@ -314,7 +289,8 @@
                <a class="hover:text-amber-800" href="tel:+2349021847610">09021847610</a>
             </div>
             <button type="submit"
-               class="text-white bg-amber-900 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+               class="text-white bg-amber-900 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+               data-submit-form>
                Order Now
             </button>
       </form>
@@ -339,7 +315,7 @@
                      </div>
                      <input
                         class="block p-3 pl-12 w-full text-sm text-white bg-transparent rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg placeholder-white"
-                        placeholder="Enter your email" type="email" id="email" required="" autocomplete="off" />
+                        placeholder="Enter your email" type="email" id="email" autocomplete="off" />
                   </div>
                   <div>
                      <button type="submit"
@@ -426,13 +402,13 @@
             </p>
             <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
                <li>
-                  <a href="/" class="text-sm text-slate-100">F.A.Q</a>
+                  <a href="#" class="text-sm text-slate-100">F.A.Q</a>
                </li>
                <li>
-                  <a href="/" class="text-sm text-slate-100">Privacy Policy</a>
+                  <a href="#" class="text-sm text-slate-100">Privacy Policy</a>
                </li>
                <li>
-                  <a href="/" class="text-sm text-slate-100">Terms &amp; Conditions</a>
+                  <a href="#" class="text-sm text-slate-100">Terms &amp; Conditions</a>
                </li>
             </ul>
          </div>
@@ -440,6 +416,9 @@
    </footer>
 
    <script src="js/navigation.js"></script>
+   <script src="js/buttons.js"></script>
+   <script src="js/store.js"></script>
+   <script src="js/valorder.js"></script>
 </body>
 
 </html>

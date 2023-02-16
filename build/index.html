@@ -116,13 +116,11 @@
         </ul>
       </nav>
       <div class="flex items-center cursor-pointer">
-        <div class="cart-icon" onclick="window.location.href='cart.html'">
-          <span class=" relative">
-            <i class='bx bx-cart bx-lg'></i>
+        <div class="cart-icon  gap-5" onclick="window.location.href='order.html'">
+          <span class="flex gap-1 bg-amber-900 p-2 text-white text-center rounded-sm cusor-pointer hover:bg-amber-800">
+            <i class='bx bx-cart bx-sm'></i> 
+            <p class="capitalize text-base">order now</p>
           </span>
-          <div class="cart-items absolute text-white bg-amber-900 py-1 px-3 rounded-xl top-[30px]" id="quantity">
-            0
-          </div>
         </div>
         <!-- Menu Button Toggler For Small Screen Sizes -->
         <span class="md:hidden w-10 h-10 cursor-pointer" id="nav-toggle">
@@ -178,7 +176,7 @@
         </p>
       </article>
       <a class=" py-4 px-7 text-white font-medium bg-amber-900 rounded-md hover:text-white hover:bg-transparent hover:border-2 hover:border-solid hover:border-white"
-        href="order.html">order now</a>
+        href="#newsletters">Connect with us</a>
     </section>
     <!-- Hero Section Ends -->
     <!-- About us section -->
@@ -239,7 +237,7 @@
     <!-- About us section ends -->
     <!-- Services Section -->
     <section class="w-full h-auto bg-white" id="services">
-      <h1 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">Why choose us?</h1>
+      <h1 class="text-center pt-16 pb-7 text-3xl lg:text-5xl font-bold">Why choose us?</h1>
       <div class="flex flex-col justify-center items-center gap-3 lg:flex-row">
         <!-- 1 -->
         <div class="flex flex-col justify-around items-center py-5">
@@ -287,11 +285,11 @@
     </section>
     <!-- Services Ends -->
     <!-- Newsletters -->
-    <section class="bg-amber-900">
+    <section class="bg-amber-900" id="newsletters">
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md sm:text-center">
-          <h2 class="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">Sign up for our newsletter</h2>
-          <p class="mx-auto mb-8 max-w-2xl font-light text-white md:mb-12 sm:text-xl">Stay up to date with the roadmap
+          <h2 class="pt-10 mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">Sign up for our newsletter</h2>
+          <p class="pt-5 mx-auto mb-8 max-w-2xl font-light text-white md:mb-12 sm:text-xl">Stay up to date with the roadmap
             progress, announcements and exclusive discounts feel free to sign up with your email.</p>
           <form action="#">
             <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
@@ -320,8 +318,8 @@
     </section>
     <!-- Nwesletters Ends -->
     <!-- Product Category -->
-    <section class="w-full pb-4 bg-slate-100 -scroll-mt-10" id="products">
-      <h2 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">Our Product</h2>
+    <section class="w-full pb-4 bg-slate-100" id="products">
+      <h2 class="text-center pt-16 pb-7 text-3xl lg:text-5xl font-bold">Our Product</h2>
       <div class="container_group">
         <i class='hidden md:block bx bx-left-arrow-circle bx-lg arrow' id="slide-left"></i>
         <div class="container-slide">
@@ -520,8 +518,7 @@
     <section class="bg-amber-900" id="contact">
       <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-slate-100 sm:text-xl">Got a technical issue? Want to send
-          feedback about a beta feature? Need details about our Footwear maunfacturing? Let us know.</p>
+        <p class="mb-8 lg:mb-16 font-light text-center text-slate-100 sm:text-xl"> Need details about our Footwear maunfacturing? Let us know.</p>
         <form action="#" class="space-y-8">
           <div>
             <label for="email" class="block mb-2 text-sm font-medium text-slate-100">Your email</label>
@@ -591,13 +588,13 @@
         </div>
         <div>
           <div class="flex items-center mt-1 space-x-3">
-            <a href="/" class="text-gray-500 transition-colors duration-300">
+            <a href="#" class="text-gray-500 transition-colors duration-300">
               <i class='bx bxl-facebook bx-lg hover:text-blue-700'></i>
             </a>
-            <a href="/" class="text-gray-500 transition-colors duration-300">
+            <a href="#" class="text-gray-500 transition-colors duration-300">
               <i class='bx bxl-instagram bx-lg hover:text-rose-800'></i>
             </a>
-            <a href="/" class="text-gray-500 transition-colors duration-300">
+            <a href="#" class="text-gray-500 transition-colors duration-300">
               <i class='bx bxl-twitter bx-lg hover:text-blue-600'></i>
             </a>
           </div>
@@ -612,21 +609,22 @@
         </p>
         <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
-            <a href="/" class="text-sm text-slate-100">F.A.Q</a>
+            <a href="#" class="text-sm text-slate-100">F.A.Q</a>
           </li>
           <li>
-            <a href="/" class="text-sm text-slate-100">Privacy Policy</a>
+            <a href="#" class="text-sm text-slate-100">Privacy Policy</a>
           </li>
           <li>
-            <a href="/" class="text-sm text-slate-100">Terms &amp; Conditions</a>
+            <a href="#" class="text-sm text-slate-100">Terms &amp; Conditions</a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
   <script src="./js/navigation.js"></script>
+  <script src="./js/scroll.js"></script>
   <script src="./js/slider.js"></script>
-  <script type="module" src="js/cartDOM.js"></script>
+  <script type="module" src="./js/buttons.js"></script>
 </body>
 
 </html>

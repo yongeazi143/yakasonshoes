@@ -1,0 +1,43 @@
+input,
+select,
+option,
+textarea {
+  outline: none !important;
+}
+.error {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+
+  40%,
+  60% {
+    margin-left: 12px;
+  }
+}
+
+.error-message {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.error-message:focus {
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.display-none {
+  display: none;
+}
