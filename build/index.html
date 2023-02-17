@@ -14,9 +14,45 @@
   <link rel="icon" href="images/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="./css/slider.css">
   <title>Yakason Shoes, footwear manufacturing company.</title>
+
+  <!-- Style -->
+  <style>
+    #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #777777;
+  z-index: 9999;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ffbb28;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+  </style>
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+  <div id="loader"></div>
+  </div>
+
   <!-- header Section For Website Logo and Navigations -->
   <header class="z-10 fixed top-0 w-full bg-white px-3 uppercase shadow-md h-16">
     <div class="container mx-auto flex items-center justify-between h-full">
@@ -621,6 +657,12 @@
       </div>
     </div>
   </footer>
+  <script>
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+  });
+</script>
   <script src="./js/navigation.js"></script>
   <script src="./js/scroll.js"></script>
   <script src="./js/slider.js"></script>
