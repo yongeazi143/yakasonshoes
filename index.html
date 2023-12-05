@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description" content="
+      Yakason Global Best Venture is registered with the Corporate Affairs Commission in 2005 with the intent to produce, distribute and export footwear and leather products across the globe which include leather shoes, cortina school shoes, sandals, men's shoes, school shoes, military boots , safety boots leather bags and leather belts etc.  
+      " />
+  <meta name="keywords" content="" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/slider.css">
+  <title>Yakason Shoes, footwear manufacturing company.</title>
+
+  <!-- Style -->
+  <style>
+    #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ffbb28;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <!-- <img src="./images/logo.png" alt=""> -->
+  <div id="loader"></div>
+  </div>
+
+  <!-- header Section For Website Logo and Navigations -->
+  <header class="z-10 fixed top-0 w-full bg-white px-3 uppercase shadow-md h-16">
+    <div class="container mx-auto flex items-center justify-between h-full">
+      <!-- Website Logo -->
+      <a href="index.html" class="flex items-center justify-center">
+        <img class="h-8 lg:h-12" src="./images/logo.png" alt="logo" />
+      </a>
+      <!-- Full Navigation For All Screen Size Expect Mobile -->
+      <nav class="hidden font-medium md:block lg:text-lg h-full navbar">
+        <ul class="mx-auto flex items-center h-full">
+          <li class=" p-5 xl:p-8 hover:text-amber-900 link">
+            <a href="#hero" class="active"> Home </a>
+          </li>
+          <li class="p-5 xl:p-8 hover:text-amber-900 link">
+            <a href="#about" class=""> about us </a>
+          </li>
+          <!-- Services Dropdown Link -->
+          <li class="dropdown p-5 xl:p-8">
+            <div class=" w-full flex justify-center items-center hover:text-amber-900 cursor-pointer link">
+              <a href="#services" class=""> services </a>
+              <i class='bx bx-chevron-down bx-md'></i>
+            </div>
+            <!-- Container For Services Dropdown Contents -->
+            <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
+              <ul>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">Footwear Consultancy
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">Supply of footwear materials
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">
+                    Supply of Machinery
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">
+                    Cooperate Footwear Tranning
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">
+                    Production OF footwear products
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#services" class="">
+                    Distribution of footwear products
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Products Dropdown Link -->
+          <li class="dropdown p-5 xl:p-8" id="dropdown">
+            <div class="w-full flex justify-center items-center  hover:text-amber-900 cursor-pointer link">
+              <a href="#products" class=""> products </a>
+              <i class=' mt-1 bx bx-chevron-down bx-md'></i>
+            </div>
+            <!-- Container For Products Dropdown Contents -->
+            <div class="dropdown-content absolute top-[65px] z-10 hidden bg-[#FFF] p-10 shadow-2xl">
+              <ul>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">Leather Bags </a>
+                </li>
+                <li class=" pb-3 hover:text-amber-900">
+                    <a href="#products" class="">Leather Belts </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">Cortina School Shoes
+                  </a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">Children Shoes</a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">Casual Shoes</a>
+                </li>
+                <li class="pb-3">
+                  <a href="#products" class="">Men Coperate</a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">Safety Boots</a>
+                </li>
+                <li class="pb-3 hover:text-amber-900">
+                  <a href="#products" class="">military boots </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="p-5 xl:p-8 hover:text-amber-900 link">
+            <a href="#contact" class=""> contact us </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center cursor-pointer">
+        <div class="cart-icon  gap-5" onclick="window.location.href='order.html'">
+          <span class="flex gap-1 bg-amber-900 p-2 text-white text-center rounded-sm cusor-pointer hover:bg-amber-800">
+            <i class='bx bx-cart bx-sm'></i> 
+            <p class="capitalize text-base">order now</p>
+          </span>
+        </div>
+        <!-- Menu Button Toggler For Small Screen Sizes -->
+        <span class="md:hidden w-10 h-10 cursor-pointer" id="nav-toggle">
+          <i class='bx bx-menu-alt-left bx-lg'></i>
+        </span>
+      </div>
+    </div>
+    <!-- Navigation for mobile screen devices -->
+    <div class="absolute bg-opacity-90 top-16 left-0 z-10 min-h-screen bg-[#333]  transition-all md:hidden sidebar close"
+      id="mobile-nav">
+      <ul class="p-3 mt-[10%] flex flex-col justify-around h-[40vh] text-gray-50">
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+          <i class='bx bx-home'></i>
+          <a href="#hero">Home</a>
+        </li>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer ml-0 mb-[1px]">
+          <i class='bx bx-compass'></i>
+          <a href="#about">About us</a>
+        </li>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+            <i class='bx bx-cog'></i>
+          <a href="#services">Services</a>
+        </li>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+            <i class='bx bxl-product-hunt'></i>
+          <a href="#products">Products</a>
+        </li>
+        <li class="p-2 active:bg-amber-900 active:text-gray-50 hover:bg-amber-900 cursor-pointer">
+          <i class='bx bxs-contact bx-tada'></i>
+          <a href="#contact">Contact us</a>
+        </li>
+          <a
+            href="order.html"
+            class="p-2 mt-5 bg-amber-900 text-gray-50 hover:bg-amber-800 font-medium cursor-pointer text-center rounded-md"
+            >order in bulk</a
+          >
+      </ul>
+    </div>
+  </header>
+  <!-- 🔥🔥🔥🔥🔥🔥🔥🔥
+       Navigation Ends Here 
+    🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    -->
+
+  <!-- The Main Content Start Here -->
+  <main class="mx-auto">
+    <!-- Hero Section -->
+    <section class="top-16 mb-14 flex flex-col items-center justify-center p-6 gap-3" id="hero">
+      <article class="flex gap-3 flex-col text-center text-slate-100 article">
+        <h1 class="text-2xl lg:text-5xl word-spacing font-bold uppercase">Quality Express in Footwears</h1>
+        <p class="sub-header lg:text-2xl w-1/2 self-center text-base">
+          We prioritize durability and attractive design in our operations and operate with a quality culture.
+        </p>
+      </article>
+      <a class=" py-4 px-7 text-white font-medium bg-amber-900 rounded-md hover:text-white hover:bg-transparent hover:border-2 hover:border-solid hover:border-white"
+        href="#newsletters">Connect with us</a>
+    </section>
+    <!-- Hero Section Ends -->
+    <!-- About us section -->
+    <section
+      class="bg-amber-900 w-full p-5 text-white text-lg flex flex-col-reverse justify-around lg:flex-row items-center"
+      id="about">
+      <img src="images/about1.png" alt="about-us-img">
+      <article class="flex gap-3 flex-col text-center text-slate-100">
+        <h1 class="text-center pt-10 pb-7 text-3xl lg:text-5xl font-bold">About us</h1>
+        <p class="lg:text-2xl w-[70%] self-center text-lg">
+          The company provides footwear that competes favorably in terms of quality with foreign products to the local
+          markets at a price that represents value for money. The company’s value proposition is to provide competitive
+          footwear to end users at a price that represents value through the combination of knowledge; experience
+          marketing skills and efficient production systems. This is enabled by the Youwin program, an initiative to
+          empower local entrepreneurs in wealth creation and employment.
+        </p>
+      </article>
+    </section>
+    <section class="w-full bg-transparent min-h-screen">
+
+      <h1 class="text-center pt-20 pb-20 text-3xl lg:text-5xl font-bold text-white">We Got You Covered</h1>
+      <div class="flex justify-around gap-5 flex-col lg:flex-row items-center pb-6">
+        <article class=" flex p-5 flex-col text-center text-slate-100
+      border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our History</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
+
+            Yakason Global Best Venture is registered with the Corporate Affairs Commission in 2005 with the intent to
+            produce; distribute and export footwear. Target end users include all age categories across the country.
+
+          </p>
+        </article>
+        <article class=" flex p-5 flex-col text-center  text-slate-100
+      border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Our Mission & Vision</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
+
+            Our mission is to make the company a household name across the country and beyond.
+            We envision providing footwear that competes favorably with foreign products to the local market at a price
+            that represents value for money
+
+          </p>
+        </article>
+        <article class=" flex p-5 flex-col text-center text-slate-100
+      border bg-amber-900 w-3/4 md:w-1/2 lg:w-96 rounded-md opacity-70">
+          <h3 class="text-center pt-10 pb-7 text-3xl lg:text-2xl font-bold">Quality Policy</h3>
+          <p class="lg:text-2xl w-full self-center text-lg">
+
+            We operate a quality culture in our operations with an emphasis on durability and appealing design.
+            After-sales feedback is available to take complaints and replacement of the impaired product under set
+            conditions.
+
+
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- About us section ends -->
+    <!-- Services Section -->
+    <section class="w-full h-auto bg-white" id="services">
+      <h1 class="text-center pt-16 pb-7 text-3xl lg:text-5xl font-bold">Why choose us?</h1>
+      <div class="flex flex-col justify-center items-center gap-3 lg:flex-row">
+        <!-- 1 -->
+        <div class="flex flex-col justify-around items-center py-5">
+          <i class='bx bxs-group text-amber-900 text-8xl'></i>
+          <h2 class="pt-5 text-3xl font-medium text-center">
+            Footwear consultant
+          </h2>
+          <p class="w-[70%] mt-3 p-2 text-center text-lg font-normal"> Yakason shoes is the number one best place where
+            you get
+            valuable information with the help of footwear experts
+          </p>
+        </div>
+        <!-- 2 -->
+        <div class="flex flex-col justify-around items-center py-5">
+          <i class='bx bxs-store text-amber-900 text-8xl'></i>
+          <h2 class="pt-5 text-3xl font-medium text-center">
+            Supply of footwear
+          </h2>
+          <p class="w-[70%] mt-3 p-2 text-center text-lg font-normal"> Yakason shoes is the number one best place where
+            you get
+            valuable information with the help of footwear experts </p>
+        </div>
+        <!-- 3 -->
+        <div class="flex flex-col justify-around items-center py-5">
+          <i class='bx bx-trip text-amber-900 text-8xl'></i>
+          <h2 class="pt-5 text-3xl font-medium text-center">
+            Supply of machinery
+          </h2>
+          <p class="w-[70%] mt-3 p-2 text-center text-lg font-normal"> Yakason shoes is the number one best place where
+            you get
+            valuable information with the help of footwear experts
+          </p>
+        </div>
+        <!-- 4 -->
+        <div class="flex flex-col justify-around items-center py-5">
+          <i class='bx bxs-cog text-amber-900 text-8xl'></i>
+          <h2 class="pt-5 text-3xl font-medium text-center">
+            Footwear training
+          </h2>
+          <p class="w-[70%] mt-3 p-2 text-center text-lg font-normal"> Yakason shoes is the number one best place where
+            you get
+            valuable information with the help of footwear experts </p>
+        </div>
+      </div>
+    </section>
+    <!-- Services Ends -->
+    <!-- Newsletters -->
+    <section class="bg-amber-900" id="newsletters">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-md sm:text-center">
+          <h2 class="pt-10 mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">Sign up for our newsletter</h2>
+          <p class="pt-5 mx-auto mb-8 max-w-2xl font-light text-white md:mb-12 sm:text-xl">Stay up to date with the roadmap
+            progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+          <form action="#">
+            <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+              <div class="relative w-full">
+                <label for="email" class="hidden mb-2 text-sm font-medium text-white">Email address</label>
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                  <i class='bx bxs-envelope bx-md text-white'></i>
+                </div>
+                <input
+                  class="block p-3 pl-12 w-full text-sm text-white bg-transparent rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg placeholder-white"
+                  placeholder="Enter your email" type="email" id="email"" autocomplete="off" subscribe-input/>
+              </div>
+              <div>
+                <button type="submit"
+                  class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-amber-800" subscribe-btn>Subscribe</button>
+              </div>
+            </div>
+            <p
+              class=" hidden mx-auto max-w-screen-sm text-base text-left text-red-500" sub-error></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Nwesletters Ends -->
+    <!-- Product Category -->
+    <section class="w-full pb-4 bg-slate-100" id="products">
+      <h2 class="text-center pt-16 pb-7 text-3xl lg:text-5xl font-bold">Our Product</h2>
+      <div class="container_group">
+        <i class='hidden md:block bx bx-left-arrow-circle bx-lg arrow' id="slide-left"></i>
+        <div class="container-slide">
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p1.png" alt="cortina-shoe">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Cortina</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 8,500</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p2.png" alt="leather-bag">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Bags</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 10,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p3.png" alt="leather-belt">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Belts</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 5,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p4.png" alt="cortina-brown">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Cortina (Brown)</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 8,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p5.png" alt="men-coperate">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Men Coperate</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 30,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p6.png" alt="men-coperate">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Coperate (Brown)</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 28,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p7.png" alt="safety-boot">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Safety Boot</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 15,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p8.png" alt="military-boot">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Military Boot</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 20,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p9.png" alt="palm-slipers">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Shoe Plams</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 10,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/p10.png" alt="kids-coperate">
+            </div>
+
+            <div class="contentBx">
+
+              <h2>Children Shoes</h2>
+
+              <div class="price">
+                <h3>price:</h3>
+                <span>&#8358 12,000</span>
+              </div>
+              <a href="#">Buy Now</a>
+            </div>
+
+          </div>
+        </div>
+        <i class='hidden md:block bx bx-right-arrow-circle arrow bx-lg' id="slide-right"></i>
+      </div>
+    </section>
+    <!-- End Of Products -->
+    <!-- Contact -->
+    <section class="bg-amber-900" id="contact">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-slate-100 sm:text-xl"> Need details about our Footwear maunfacturing? Let us know.</p>
+        <form action="#" class="space-y-8">
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-slate-100">Your email</label>
+            <input type="email" id="email"
+              class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="Enter your email" required>
+          </div>
+          <div>
+            <label for="text" class="block mb-2 text-sm font-medium text-slate-100">Your subject</label>
+            <input type="text" id="subject"
+              class="shadow-sm bg-gray-50 border border-white text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="How can we be of assistance?" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block mb-2 text-sm font-medium text-slate-100">Your message</label>
+            <textarea id="message" rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Explain in details..."></textarea>
+          </div>
+          <button type="submit"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-transparent border sm:w-fit  focus:ring-4 focus:outline-none hover:bg-amber-800">Send
+            message</button>
+        </form>
+      </div>
+    </section>
+    <!-- End Of Contact -->
+  </main>
+  <footer class="bg-black">
+    <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="sm:col-span-2">
+          <a href="/" aria-label="Go home" class="inline-flex items-center">
+            <span class=" text-xl font-bold tracking-wide text-amber-900 ring-4 p-1 ring-white uppercase">Yakason Global
+              Best Venture</span>
+          </a>
+          <div class="mt-6 lg:max-w-sm">
+            <p class="text-sm text-slate-100">
+              Our customers are the reason we are in business. The need and taste of our end users are incorporated in
+              our chain of production to delivery of products.
+            </p>
+            <p class="mt-4 text-sm text-slate-100">
+              We have showrooms for display and booking of orders for any of our products. Specifications and price are
+              clearly agreed as well as delivery timelines. Our customer care line is open 24 hours to attend to your
+              needs and take orders.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p class="text-base font-bold tracking-wide text-slate">Contacts Info</p>
+          <div class="flex">
+            <p class="mr-1 text-slate-100">Phone:</p>
+            <a href="tel:+234-808-0880-439" aria-label="Our phone" title="Our phone" class="text-slate-100">+234 808
+              0880 439</a>
+          </div>
+          <div class="flex">
+            <p class="mr-1 text-slate-100">Email:</p>
+            <a href="mailto:yakason2007@yahoo.com" aria-label="Our email" title="Our email"
+              class="text-slate-100">info@yakasonshoes.com</a>
+          </div>
+          <div class="flex">
+            <p class="mr-1 text-slate-100">Address:</p>
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address"
+              title="Our address" class="text-slate-100">
+              99 Abeokuta Expressway Lagos.
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center mt-1 space-x-3">
+            <a href="#" class="text-gray-500 transition-colors duration-300">
+              <i class='bx bxl-facebook bx-lg hover:text-blue-700'></i>
+            </a>
+            <a href="#" class="text-gray-500 transition-colors duration-300">
+              <i class='bx bxl-instagram bx-lg hover:text-rose-800'></i>
+            </a>
+            <a href="#" class="text-gray-500 transition-colors duration-300">
+              <i class='bx bxl-twitter bx-lg hover:text-blue-600'></i>
+            </a>
+          </div>
+          <p class="mt-4 text-sm text-slate-100">
+            Connect with us via our social media handles.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+        <p class="text-sm text-slate-100">
+          © Copyright 2023 Yakason.Inc. All rights reserved.
+        </p>
+        <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          <li>
+            <a href="#" class="text-sm text-slate-100">F.A.Q</a>
+          </li>
+          <li>
+            <a href="#" class="text-sm text-slate-100">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="text-sm text-slate-100">Terms &amp; Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+  });
+
+  const subcribeBTN = document.querySelector('[subscribe-btn]');
+  const subInput = document.querySelector('[subscribe-input]');
+  const subErr = document.querySelector('[sub-error]');
+  let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  subcribeBTN.addEventListener('click',() => {
+    if (subInput.value.trim() === '') {
+      subErr.classList.remove('hidden');
+      subErr.innerHTML = "Email cannot be empty";
+    }
+    
+    else {
+      subErr.classList.add('hidden');
+      subErr.innerHTML = "";
+    }
+  });
+
+  subInput.addEventListener('keyup',() => {
+    if (!(subInput.value.match(pattern))) {
+      subErr.classList.remove('hidden');
+      subErr.innerHTML = "Invalid email address";
+       
+    }
+  });
+</script>
+  <script src="./js/navigation.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/slider.js"></script>
+  <script type="module" src="./js/buttons.js"></script>
+</body>
+
+</html>
